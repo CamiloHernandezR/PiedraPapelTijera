@@ -80,7 +80,7 @@ header > h1 {
 
 .opcion:hover{
   cursor: pointer;
-  background: green;
+  background: #4E5754;
 }
 
 #mensaje{

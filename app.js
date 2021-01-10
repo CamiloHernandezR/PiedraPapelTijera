@@ -25,7 +25,7 @@ function victoria(usuarioEleccion, eleccionComputadora){
    computadoraPalabra= "comp".fontsize(3).sup();
   resultado_div.innerHTML= `${getPalabra(usuarioEleccion)}${usuarioPalabra}  vence a   ${getPalabra(eleccionComputadora)}${computadoraPalabra} . Tú ganas."`;
   usuarioEleccion_div.classList.add('brillo-verde');
-  setTimeout(function(){usuarioEleccion_div.classList.remove('brillo-verde')},500);
+  setTimeout(() => usuarioEleccion_div.classList.remove('brillo-verde'),500);
 }
 function derrota(usuarioEleccion, eleccionComputadora){
   puntosComputadora++;
@@ -33,13 +33,13 @@ function derrota(usuarioEleccion, eleccionComputadora){
   puntosComputadora_span.innerHTML=puntosUsuario;
   resultado_div.innerHTML= `${getPalabra(usuarioEleccion)}${usuarioPalabra}  Es derrotado por   ${getPalabra(eleccionComputadora)}${computadoraPalabra} . Tú pierdes."`
   usuarioEleccion_div.classList.add('brillo-rojo');
-  setTimeout(function(){usuarioEleccion_div.classList.remove('brillo-rojo')},500);
+  setTimeout(() => usuarioEleccion_div.classList.remove('brillo-rojo'),500);
 }
 function empate(usuarioEleccion, eleccionComputadora){
   let usuarioEleccion_div= document.getElementById(usuarioEleccion);
   resultado_div.innerHTML= `${getPalabra(usuarioEleccion)}${usuarioPalabra}  Es igual a    ${getPalabra(eleccionComputadora)}${computadoraPalabra} . Es un empate."`
   usuarioEleccion_div.classList.add('brillo-gris');
-  setTimeout(function(){usuarioEleccion_div.classList.remove('brillo-gris')},500);
+  setTimeout(() => usuarioEleccion_div.classList.remove('brillo-gris'),500);
 
 }
 function game(usuarioEleccion){
@@ -61,16 +61,10 @@ function game(usuarioEleccion){
   }
 }
 function main(){
-  pieda_div.addEventListener("click", function(){
-      game("r");
-  });
+  pieda_div.addEventListener("click",() => game("r"));
 
-  tijeras_div.addEventListener("click", function(){
-      game("s");
-  });
-  papel_div.addEventListener("click", function(){
-    game("p");
-  });
+  tijeras_div.addEventListener("click", () => game("s"));
+  papel_div.addEventListener("click", () => game("p"));
 }
 
 main();
