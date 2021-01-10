@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,600;1,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #292C34;
+}
+
+header{
+  background: white;
+  padding: 30px
+}
+
+header > h1 {
+  color: #25272E;
+  text-align: center;
+  font-family:  Asap, sans-serif;
+}
+
+.marcador{
+    margin: 20px auto;
+    border: 3px solid white;
+    width: 300px;
+    color: white;
+    font-size: 50px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px 20px;
+    font-family: Asap, sans-serif;
+    position: relative;
+}
+
+.nombre {
+  background: #E2584D;
+  color: white;
+  font-size: 18px;
+  font-family: Asap, sans-serif;
+  padding: 2px 18px;
+}
+
+#usuario-label{
+  position: absolute;
+  top: 30px;
+  left: -50px;
+}
+
+#computadora-label{
+  position: absolute;
+  top: 30px;
+  right: -80px;
+}
+
+.resultado{
+  color: white;
+  font-size: 30px;
+  padding: 15px;
+}
+
+ .resultado > h2{
+   text-align: center;
+   font-weight: bold;
+   font-family: Asap, sans-serif;
+ }
+
+.opciones{
+  margin: 50px 0;
+  text-align: center;
+}
+.opcion{
+  display: inline-block;
+  margin: 0 20px;
+  padding: 10px;
+  border:  4px solid white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.opcion:hover{
+  cursor: pointer;
+  background: green;
+}
+
+#mensaje{
+  color: white;
+  text-align: center;
+  font-family: Asap, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px;
+}
