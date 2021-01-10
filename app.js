@@ -19,18 +19,27 @@ function getPalabra(letra){
 }
 function victoria(usuarioEleccion, eleccionComputadora){
   puntosUsuario++;
+  let usuarioEleccion_div= document.getElementById(usuarioEleccion);
   puntosUsuario_span.innerHTML=puntosUsuario;
    usuarioPalabra= "usuario".fontsize(3).sup();
    computadoraPalabra= "comp".fontsize(3).sup();
-  resultado_div.innerHTML= `${getPalabra(usuarioEleccion)}${usuarioPalabra}  vence a   ${getPalabra(eleccionComputadora)}${computadoraPalabra} . Tú ganas."`
+  resultado_div.innerHTML= `${getPalabra(usuarioEleccion)}${usuarioPalabra}  vence a   ${getPalabra(eleccionComputadora)}${computadoraPalabra} . Tú ganas."`;
+  usuarioEleccion_div.classList.add('brillo-verde');
+  setTimeout(function(){usuarioEleccion_div.classList.remove('brillo-verde')},500);
 }
 function derrota(usuarioEleccion, eleccionComputadora){
   puntosComputadora++;
+  let usuarioEleccion_div= document.getElementById(usuarioEleccion);
   puntosComputadora_span.innerHTML=puntosUsuario;
   resultado_div.innerHTML= `${getPalabra(usuarioEleccion)}${usuarioPalabra}  Es derrotado por   ${getPalabra(eleccionComputadora)}${computadoraPalabra} . Tú pierdes."`
+  usuarioEleccion_div.classList.add('brillo-rojo');
+  setTimeout(function(){usuarioEleccion_div.classList.remove('brillo-rojo')},500);
 }
 function empate(usuarioEleccion, eleccionComputadora){
+  let usuarioEleccion_div= document.getElementById(usuarioEleccion);
   resultado_div.innerHTML= `${getPalabra(usuarioEleccion)}${usuarioPalabra}  Es igual a    ${getPalabra(eleccionComputadora)}${computadoraPalabra} . Es un empate."`
+  usuarioEleccion_div.classList.add('brillo-gris');
+  setTimeout(function(){usuarioEleccion_div.classList.remove('brillo-gris')},500);
 
 }
 function game(usuarioEleccion){
